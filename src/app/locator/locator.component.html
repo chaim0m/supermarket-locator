@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h1>Supermarket Locator</h1>
+  <div class="form-group search">
+    <input size=35 placeholder="Enter Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+    <div>
+    <button mat-raised-button color="primary" (click)="sendLocation()" routerLink="preferences">Submit</button>
+  </div>
+  </div>
+  <div class="map">
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+  </div>
+</div>
